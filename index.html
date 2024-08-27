@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header></header>
+    <main class="presentacion">
+        <div>
+        <h1 class="presentacion__titulo">Alura</h1>
+        <input class="presentacion__cuerpo" type="text" id="texto" placeholder="Ingresa el texto aqui">
+        
+        <p class="presentacion__pie">Solo palabras sin acento y sin caracteres especiales.</p>
+        <div class="botones">
+            <button onclick="encriptarTexto();" class="container__boton">Encriptar</button>
+            <button onclick="desencriptarTexto();" class="container__boton">Desencriptar</button>
+        </div>
+    </div>
+        <div class="segunda__parte">
+        <img src="luffy.jpeg">
+        <p id="resultado">Ningun mensaje fue encontrado</p>
+        <div>
+            <button onclick="copiarTexto();" class="container__boton">Copiar</button>
+        </div>
+    </div>
+        </main>
+    <footer>
+        <p class="pie__pagina">David Morales-Agosto 2024</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>

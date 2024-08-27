@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden; /* Evita el desbordamiento horizontal */
+}
+
+main.presentacion {
+    display: flex;
+    height: calc(100vh - 50px); /* Ajusta la altura para incluir el pie de página */
+}
+
+.presentacion > div:first-child {
+    flex: 0 0 60%; /* 60% del ancho para pantallas grandes */
+}
+
+.presentacion > div:last-child {
+    flex: 0 0 40%; /* 40% del ancho para pantallas grandes */
+}
+
+main.presentacion {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - 50px); /*altura de la pantalla menos el pie de la pagina*/
+}
+
+/* Estilos para la parte izquierda */
+.presentacion > div:first-child {
+    flex: 0 0 60%; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #77E4C8;
+    gap: 40px;
+}
+
+
+.presentacion__titulo {
+    margin: 0;
+    font-size: 32px; 
+    align-self: flex-start; 
+    color: 4535C1;
+}
+
+/* Estilo para el input*/
+.presentacion__cuerpo {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    margin: 0 auto; /* Centra horizontalmente */
+    font-size: 20px; /* Ajusta el tamaño del texto */
+    color: 4535C1;
+    background-color: transparent; /* Sin fondo */
+    border: none; /* Sin borde */
+    outline: none;
+    text-align:left ; 
+}
+
+
+.presentacion__pie{
+    margin: 0;
+    font-size: 18px; /* Ajusta el tamaño del texto */
+    align-self: flex-start; /* Alinea a la parte inferior */
+    margin-bottom: 10px; /* Reduce el espacio inferior para estar cerca de los botones */
+    margin-top: auto; /* Empuja el mensaje hacia abajo */
+}
+
+/* Estilo para los botones */
+.container__boton {
+    width: 300px; /* Ajusta el tamaño del botón */
+    background-color: #478CCF;
+    text-align: center;
+    padding: 15px 20px; /* Ajusta el padding para hacer los botones más grandes */
+    border-radius: 24px;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px; /* Aumenta el tamaño del texto en los botones */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.container__boton:hover {
+    background-color: #478CCF;
+}
+
+/* Ajuste para centrar los botones */
+.botones {
+    display: flex;
+    justify-content: space-around; /* Espacia uniformemente los botones */
+    width: 100%;
+}
+
+/* Estilos para la parte derecha */
+.presentacion > div:last-child {
+    flex: 1; /* 40% del ancho restante */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #36C2CE;
+}
+
+/* Estilos para la imagen */
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el mensaje */
+#resultado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+}
+
+.pie__pagina{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    background-color: #478CCF;
+    margin: 0; 
+    padding: 10px; 
+}
+
+footer {
+    margin: 0;
+    padding: 10px;
+    background-color: #478CCF;
+    color: white;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+
+/* Media Queries para ajustar en pantallas medianas (tabletas) */
+@media (max-width: 768px) {
+    main.presentacion > div:first-child {
+        flex: 0 0 100%;
+    }
+
+    main.presentacion > div:last-child {
+        flex: 0 0 100%;
+    }
+
+    .botones {
+        flex-direction: column;
+    }
+
+    .container__boton {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Media Queries para ajustar en pantallas pequeñas (teléfonos) */
+@media (max-width: 480px) {
+    main.presentacion {
+        flex-direction: column;
+    }
+
+    main.presentacion > div {
+        flex: 1 1 auto;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .container__boton {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .presentacion__cuerpo {
+        font-size: 16px;
+    }
+
+    #resultado {
+        font-size: 16px;
+    }
+}
